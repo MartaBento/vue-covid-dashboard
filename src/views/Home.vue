@@ -1,6 +1,10 @@
 <template>
   <!-- if the browser is not loading the data -->
-  <main v-if="!loading"><DateTitle :text="title" :date="date" /></main>
+  <main v-if="!loading">
+    <DateTitle :text="title" :date="date" />
+
+    <DataContainers :stats="stats" />
+  </main>
 
   <!-- if the browser is loading the data, show an animated loading bar to the user" -->
   <main v-else>
@@ -14,10 +18,11 @@
 <script>
 import Loader from "@/components/Loader.vue";
 import DateTitle from "@/components/DateTitle.vue";
+import DataContainers from "@/components/DataContainers.vue";
 
 export default {
   name: "Home",
-  components: { Loader, DateTitle },
+  components: { Loader, DateTitle, DataContainers },
   data() {
     return {
       loading: true,
