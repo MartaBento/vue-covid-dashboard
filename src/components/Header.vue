@@ -2,14 +2,15 @@
   <header>
     <div class="container px-4 mx-auto">
       <nav class="flex justify-between items-center py-8">
-        <a class="text-gray-600 text-2xl leading-none" href="#">
-          <img
-            class="h-8"
-            src="@/assets/logo-covid.png"
-            alt="logo"
-            width="auto"
-          />
-        </a>
+        <img
+          class="h-8"
+          src="@/assets/logo-covid.png"
+          alt="logo"
+          width="auto"
+        />
+        <p class="mx-3 text-lg md:text-xl">
+          COVID-19 Dashboard <i class="fa-solid fa-chart-line"></i>
+        </p>
         <div class="lg:hidden">
           <button
             class="

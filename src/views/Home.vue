@@ -1,12 +1,44 @@
 <template>
-  <div class="home">
-    "Change me!"
-  </div>
+  <!-- if the browser is not loading the data -->
+  <main v-if="!loading">Data</main>
+
+  <!-- if the browser is loading the data, show an animated gif -->
+  <main v-else>
+    <p>Information is loading...</p>
+    <Loader />
+  </main>
 </template>
 
 <script>
+import Loader from "@/components/Loader.vue";
+
 export default {
   name: "Home",
-  components: {},
+  components: { Loader },
+  data() {
+    return {
+      loading: true,
+      title: "Global",
+      date: "",
+      stats: {},
+      countries: [],
+    };
+  },
+  methods: {
+    async fetchData() {
+      const request = await fetch("https://api.covid19api.com/summary");
+      const finalData = await request.json();
+      return finalData;
+    },
+  },
+  async created() {
+    const data = await this.fetchData();
+    console.log(data);
+
+    this.date = data.Date;
+    this.stats = data.Global;
+    this.countries = data.Countries;
+    this.loading = true;
+  },
 };
 </script>
