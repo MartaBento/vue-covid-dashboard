@@ -8,7 +8,7 @@
           alt="logo"
           width="auto"
         />
-        <p class="mx-3 text-lg md:text-xl">
+        <p class="mx-3 text-lg">
           COVID-19 Dashboard <i class="fa-solid fa-chart-line"></i>
         </p>
         <div class="lg:hidden">
