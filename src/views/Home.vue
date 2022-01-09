@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    Hello world.
+    "Change me!"
   </div>
 </template>
 
