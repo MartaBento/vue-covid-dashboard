@@ -1,30 +1,6 @@
 <template>
-  <div
-    class="
-      flex flex-wrap
-      -mx-3
-      overflow-hidden
-      sm:-mx-4
-      md:-mx-4
-      lg:-mx-3
-      xl:-mx-2
-      m-8
-    "
-  >
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+    <div class="flex justify-center text-6xl rounded-xl p-6 bg-cloud-burst-200">
       <div class="px-6 mb-8">
         <p class="text-2xl font-extrabold mt-8 mb-2">Cases</p>
         <p class="text-lg font-light mb-1 text-cloud-burst-50">New</p>
@@ -37,20 +13,7 @@
         </p>
       </div>
     </div>
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
+    <div class="flex justify-center text-6xl rounded-xl p-6 bg-cloud-burst-200">
       <div class="px-6 mb-8">
         <p class="text-2xl font-extrabold mt-8 mb-2">Deaths</p>
         <p class="text-lg font-light mb-1 text-cloud-burst-50">New</p>
@@ -64,37 +27,11 @@
       </div>
     </div>
 
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
+    <div class="flex justify-center text-6xl rounded-xl p-6 bg-cloud-burst-200">
       <div class="text-cloud-burst-50">Column 1</div>
     </div>
 
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
+    <div class="flex justify-center text-6xl rounded-xl p-6 bg-cloud-burst-200">
       <div class="text-cloud-burst-50">Column 1</div>
     </div>
   </div>
