@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-cloud-burst-100 text-center lg:text-left">
+  <footer class="bg-cloud-burst- text-center lg:text-left">
     <div
       class="text-gray-700 text-center p-4"
       style="background-color: rgba(0, 0, 0, 0.2)"

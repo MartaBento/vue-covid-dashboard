@@ -2,7 +2,7 @@
   <!-- if the browser is not loading the data -->
   <main v-if="!loading">
     <DateTitle :text="title" :date="date" />
-    <CountrySelector @get-country="getCountryData" :countries="countries" />
+    <CountrySelector :countries="countries" @get-country="getCountryData" />
     <div class="flex justify-center mt-6">
       <button
         class="
@@ -21,7 +21,6 @@
           dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
         "
         @click="clearSelectedCountry"
-        v-if="clearSelectedCountry"
       >
         Clear
       </button>
@@ -50,7 +49,7 @@ export default {
   data() {
     return {
       loading: true,
-      title: "Global",
+      title: "Worlwide 🌍",
       date: "",
       stats: {},
       countries: [],
@@ -64,12 +63,12 @@ export default {
     },
     getCountryData(country) {
       this.stats = country;
-      this.title = country.Country; // name
+      this.title = country;
     },
     async clearSelectedCountry() {
       this.loading = true;
       const data = await this.fetchData();
-      this.title = "Global";
+      this.title = "Worlwide 🌍";
       this.stats = data.Global;
       this.loading = false;
     },

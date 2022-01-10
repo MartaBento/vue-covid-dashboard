@@ -31,7 +31,9 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.NewConfirmed) }}</h4>
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.NewConfirmed) }}
+              </h4>
               <p class="text-md text-gray-500">New Cases</p>
             </div>
           </div>
@@ -70,7 +72,9 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.TotalConfirmed) }}</h4>
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.TotalConfirmed) }}
+              </h4>
               <p class="text-md text-gray-500">Total Cases</p>
             </div>
           </div>
@@ -109,7 +113,9 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.NewDeaths) }}</h4>
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.NewDeaths) }}
+              </h4>
               <p class="text-md text-gray-500">New Deaths</p>
             </div>
           </div>
@@ -148,7 +154,9 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.TotalDeaths) }}</h4>
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.TotalDeaths) }}
+              </h4>
               <p class="text-md text-gray-500">Total Deaths</p>
             </div>
           </div>

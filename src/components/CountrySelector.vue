@@ -3,7 +3,7 @@
     <div class="mb-3 xl:w-96">
       <select
         v-model="selected"
-        @change="onChange()"
+        @change="emitChange"
         class="
           form-select
           appearance-none
@@ -24,7 +24,6 @@
         "
         aria-label="Country Selector"
       >
-        <option value="0">Select Country</option>
         <option v-for="country in countries" :key="country.ID">
           {{ country.Country }}
         </option>
@@ -40,13 +39,13 @@ export default {
   props: ["countries"],
   data() {
     return {
-      selected: 0, // default value
+      selected: this.selectedItem,
     };
   },
   methods: {
-    onChange() {
-      const country = this.countries.find((item) => item.ID === this.selected);
-      this.$emit("get-country", country);
+    emitChange() {
+      console.log(this.selected);
+      this.$emit("get-country", this.selected);
     },
   },
 };
