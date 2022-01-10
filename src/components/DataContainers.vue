@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10">
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap">
         <div class="w-full p-4">
@@ -23,7 +23,7 @@
                   py-1
                   px-2
                   bg-blue-50
-                  text-xs text-indigo-500
+                  text-cloud-burst-700 text-md
                   rounded-full
                 "
                 href="#"
@@ -31,8 +31,8 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-xl font-bold">{{ stats.NewConfirmed }}</h4>
-              <p class="text-xs text-gray-500">New Cases</p>
+              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.NewConfirmed) }}</h4>
+              <p class="text-md text-gray-500">New Cases</p>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
                   py-1
                   px-2
                   bg-blue-50
-                  text-xs text-indigo-500
+                  text-md text-cloud-burst-700
                   rounded-full
                 "
                 href="#"
@@ -70,8 +70,8 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-xl font-bold">{{ stats.TotalConfirmed }}</h4>
-              <p class="text-xs text-gray-500">Total Cases</p>
+              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.TotalConfirmed) }}</h4>
+              <p class="text-md text-gray-500">Total Cases</p>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@
                   py-1
                   px-2
                   bg-blue-50
-                  text-xs text-indigo-500
+                  text-md text-cloud-burst-700
                   rounded-full
                 "
                 href="#"
@@ -109,8 +109,8 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-xl font-bold">{{ stats.NewDeaths }}</h4>
-              <p class="text-xs text-gray-500">New Deaths</p>
+              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.NewDeaths) }}</h4>
+              <p class="text-md text-gray-500">New Deaths</p>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
                   py-1
                   px-2
                   bg-blue-50
-                  text-xs text-indigo-500
+                  text-md text-cloud-burst-700
                   rounded-full
                 "
                 href="#"
@@ -148,8 +148,8 @@
               >
             </div>
             <div class="px-6 mb-6">
-              <h4 class="text-xl font-bold">{{ stats.TotalDeaths }}</h4>
-              <p class="text-xs text-gray-500">Total Deaths</p>
+              <h4 class="text-4xl font-bold">{{ formatNumbers(stats.TotalDeaths) }}</h4>
+              <p class="text-md text-gray-500">Total Deaths</p>
             </div>
           </div>
         </div>
@@ -162,5 +162,10 @@
 export default {
   name: "DataContainers",
   props: ["stats"],
+  methods: {
+    formatNumbers(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+  },
 };
 </script>

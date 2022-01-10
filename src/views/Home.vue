@@ -2,7 +2,7 @@
   <!-- if the browser is not loading the data -->
   <main v-if="!loading">
     <DateTitle :text="title" :date="date" />
-
+    <CountrySelector @get-country="getCountryData" :countries="countries" />
     <DataContainers :stats="stats" />
   </main>
 
@@ -19,10 +19,11 @@
 import Loader from "@/components/Loader.vue";
 import DateTitle from "@/components/DateTitle.vue";
 import DataContainers from "@/components/DataContainers.vue";
+import CountrySelector from "@/components/CountrySelector.vue";
 
 export default {
   name: "Home",
-  components: { Loader, DateTitle, DataContainers },
+  components: { Loader, DateTitle, DataContainers, CountrySelector },
   data() {
     return {
       loading: true,
@@ -37,6 +38,10 @@ export default {
       const request = await fetch("https://api.covid19api.com/summary");
       const finalData = await request.json();
       return finalData;
+    },
+    getCountryData(country) {
+      this.stats = country;
+      this.title = country.Country; // name
     },
   },
   async created() {

@@ -22,7 +22,7 @@ module.exports = {
       center: true
     },
     fontFamily: {
-      'sans': ['Niramit', 'Sans-serif']
+      'sans': ['Montserrat', 'Sans-serif']
     },
   },
   variants: {
