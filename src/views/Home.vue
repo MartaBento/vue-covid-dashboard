@@ -3,6 +3,29 @@
   <main v-if="!loading">
     <DateTitle :text="title" :date="date" />
     <CountrySelector @get-country="getCountryData" :countries="countries" />
+    <div class="flex justify-center mt-6">
+      <button
+        class="
+          text-white
+          bg-blue-700
+          hover:bg-blue-800
+          focus:ring-4 focus:ring-blue-300
+          font-medium
+          rounded-full
+          text-sm
+          px-5
+          py-2.5
+          text-center
+          mr-2
+          mb-2
+          dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+        "
+        @click="clearSelectedCountry"
+        v-if="clearSelectedCountry"
+      >
+        Clear
+      </button>
+    </div>
     <DataContainers :stats="stats" />
   </main>
 
@@ -42,6 +65,13 @@ export default {
     getCountryData(country) {
       this.stats = country;
       this.title = country.Country; // name
+    },
+    async clearSelectedCountry() {
+      this.loading = true;
+      const data = await this.fetchData();
+      this.title = "Global";
+      this.stats = data.Global;
+      this.loading = false;
     },
   },
   async created() {
