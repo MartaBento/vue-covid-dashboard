@@ -1,12 +1,9 @@
 <template>
-  <footer class="bg-cloud-burst- text-center lg:text-left">
-    <div
-      class="text-gray-700 text-center p-4"
-      style="background-color: rgba(0, 0, 0, 0.2)"
-    >
-      Made With Vue & Tailwind. 2022.
-    </div>
-  </footer>
+  <div class="py-24 text-gray-500 text-sm mt-12 mx-auto text-center">
+    Built with <span class="text-red-500">♥</span>, with
+    Vue.js and Tailwind. 2022
+    <a href="https://github.com/MartaBento"> <i class="fab fa-github text-cloud-burst-900"></i></a>
+  </div>
 </template>
 
 <script>

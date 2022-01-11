@@ -35,7 +35,7 @@
 
   <!-- if the browser is loading the data, show an animated loading bar to the user" -->
   <main v-else>
-    <p class="text-4xl text-center font-medium leading-tight mt-8 mb-8">
+    <p class="text-4xl text-center font-medium leading-tight mt-10 mb-8">
       Information is loading...
     </p>
     <Loader />
