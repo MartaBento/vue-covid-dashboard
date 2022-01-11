@@ -34,16 +34,16 @@
         </div>
         <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
           <li>
-            <a
+            <div
               class="
                 text-sm
                 hover:text-indigo-700
                 font-medium
                 text-cloud-burst-50
               "
-              href="#"
-              >Home Page</a
             >
+              Home Page
+            </div>
           </li>
         </ul>
       </nav>
@@ -66,14 +66,14 @@
         "
       >
         <div class="flex items-center mb-12">
-          <a class="mr-auto text-2xl font-semibold leading-none" href="#">
+          <div class="mr-auto text-2xl font-semibold leading-none">
             <img
               class="h-8"
               src="@/assets/logo-covid.png"
               alt="logo"
               width="auto"
             />
-          </a>
+          </div>
           <button class="navbar-close">
             <svg
               class="h-6 w-6 cursor-pointer hover:text-indigo-500"
@@ -94,7 +94,7 @@
         <div>
           <ul>
             <li class="mb-1">
-              <a
+              <div
                 class="
                   block
                   p-4
@@ -103,9 +103,9 @@
                   hover:bg-indigo-50 hover:text-indigo-500
                   rounded
                 "
-                href="#"
-                >Home Page</a
               >
+                Home Page
+              </div>
             </li>
           </ul>
         </div>

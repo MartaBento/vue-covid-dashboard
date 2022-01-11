@@ -3,7 +3,7 @@
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap">
         <div class="w-full p-4">
-          <div class="bg-white shadow rounded overflow-hidden">
+          <div class="bg-white shadow-md rounded overflow-hidden">
             <div class="pt-6 px-6 mb-10 flex justify-between items-center">
               <span
                 class="
@@ -18,7 +18,7 @@
               >
                 <i class="fas fa-virus"></i>
               </span>
-              <a
+              <div
                 class="
                   py-1
                   px-2
@@ -26,9 +26,9 @@
                   text-cloud-burst-700 text-md
                   rounded-full
                 "
-                href="#"
-                >Today</a
               >
+                Today
+              </div>
             </div>
             <div class="px-6 mb-6">
               <h4 class="text-4xl font-bold">
@@ -44,7 +44,7 @@
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap">
         <div class="w-full p-4">
-          <div class="bg-white shadow rounded overflow-hidden">
+          <div class="bg-white shadow-md rounded overflow-hidden">
             <div class="pt-6 px-6 mb-10 flex justify-between items-center">
               <span
                 class="
@@ -59,7 +59,7 @@
               >
                 <i class="fas fa-virus"></i>
               </span>
-              <a
+              <div
                 class="
                   py-1
                   px-2
@@ -67,9 +67,9 @@
                   text-md text-cloud-burst-700
                   rounded-full
                 "
-                href="#"
-                >Total</a
               >
+                Total
+              </div>
             </div>
             <div class="px-6 mb-6">
               <h4 class="text-4xl font-bold">
@@ -85,7 +85,7 @@
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap">
         <div class="w-full p-4">
-          <div class="bg-white shadow rounded overflow-hidden">
+          <div class="bg-white shadow-md rounded overflow-hidden">
             <div class="pt-6 px-6 mb-10 flex justify-between items-center">
               <span
                 class="
@@ -100,7 +100,7 @@
               >
                 <i class="fas fa-skull-crossbones"></i>
               </span>
-              <a
+              <div
                 class="
                   py-1
                   px-2
@@ -108,9 +108,9 @@
                   text-md text-cloud-burst-700
                   rounded-full
                 "
-                href="#"
-                >Today</a
               >
+                Today
+              </div>
             </div>
             <div class="px-6 mb-6">
               <h4 class="text-4xl font-bold">
@@ -126,7 +126,7 @@
     <div class="container px-4 mx-auto">
       <div class="flex flex-wrap">
         <div class="w-full p-4">
-          <div class="bg-white shadow rounded overflow-hidden">
+          <div class="bg-white shadow-md rounded overflow-hidden">
             <div class="pt-6 px-6 mb-10 flex justify-between items-center">
               <span
                 class="
@@ -141,7 +141,7 @@
               >
                 <i class="fas fa-skull-crossbones"></i>
               </span>
-              <a
+              <div
                 class="
                   py-1
                   px-2
@@ -149,9 +149,9 @@
                   text-md text-cloud-burst-700
                   rounded-full
                 "
-                href="#"
-                >Total</a
               >
+                Total
+              </div>
             </div>
             <div class="px-6 mb-6">
               <h4 class="text-4xl font-bold">

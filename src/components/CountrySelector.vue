@@ -24,6 +24,7 @@
         "
         aria-label="Country Selector"
       >
+        <option value="" disabled>Select country</option>
         <option v-for="country in countries" :key="country.ID">
           {{ country.Country }}
         </option>
@@ -39,7 +40,7 @@ export default {
   props: ["countries"],
   data() {
     return {
-      selected: this.selectedItem,
+      selected: '',
     };
   },
   methods: {
