@@ -1,101 +1,167 @@
 <template>
-  <div
-    class="
-      flex flex-wrap
-      -mx-3
-      overflow-hidden
-      sm:-mx-4
-      md:-mx-4
-      lg:-mx-3
-      xl:-mx-2
-      m-8
-    "
-  >
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
-      <div class="px-6 mb-8">
-        <p class="text-2xl font-extrabold mt-8 mb-2">Cases</p>
-        <p class="text-lg font-light mb-1 text-cloud-burst-50">New</p>
-        <p class="text-5xl font-thin mb-1">
-          {{ stats.NewConfirmed }}
-        </p>
-        <p class="text-lg mb-1 text-cloud-burst-50">Total</p>
-        <p class="text-5xl font-thin mb-1">
-          {{ stats.TotalConfirmed }}
-        </p>
-      </div>
-    </div>
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
-      <div class="px-6 mb-8">
-        <p class="text-2xl font-extrabold mt-8 mb-2">Deaths</p>
-        <p class="text-lg font-light mb-1 text-cloud-burst-50">New</p>
-        <p class="text-5xl font-thin mb-1">
-          {{ stats.NewDeaths }}
-        </p>
-        <p class="text-lg mb-1 text-cloud-burst-50">Total</p>
-        <p class="text-5xl font-thin mb-1">
-          {{ stats.TotalDeaths }}
-        </p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap">
+        <div class="w-full p-4">
+          <div class="bg-white shadow rounded overflow-hidden">
+            <div class="pt-6 px-6 mb-10 flex justify-between items-center">
+              <span
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  w-9
+                  h-10
+                  bg-gray-50
+                  rounded
+                "
+              >
+                <i class="fas fa-virus"></i>
+              </span>
+              <a
+                class="
+                  py-1
+                  px-2
+                  bg-blue-50
+                  text-cloud-burst-700 text-md
+                  rounded-full
+                "
+                href="#"
+                >Today</a
+              >
+            </div>
+            <div class="px-6 mb-6">
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.NewConfirmed) }}
+              </h4>
+              <p class="text-md text-gray-500">New Cases</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
-      <div class="text-cloud-burst-50">Column 1</div>
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap">
+        <div class="w-full p-4">
+          <div class="bg-white shadow rounded overflow-hidden">
+            <div class="pt-6 px-6 mb-10 flex justify-between items-center">
+              <span
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  w-9
+                  h-10
+                  bg-gray-50
+                  rounded
+                "
+              >
+                <i class="fas fa-virus"></i>
+              </span>
+              <a
+                class="
+                  py-1
+                  px-2
+                  bg-blue-50
+                  text-md text-cloud-burst-700
+                  rounded-full
+                "
+                href="#"
+                >Total</a
+              >
+            </div>
+            <div class="px-6 mb-6">
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.TotalConfirmed) }}
+              </h4>
+              <p class="text-md text-gray-500">Total Cases</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div
-      class="
-        bg-cloud-burst-400
-        my-3
-        px-3
-        w-full
-        overflow-hidden
-        sm:my-4 sm:px-4 sm:w-1/2
-        md:my-4 md:px-4 md:w-1/2
-        lg:my-3 lg:px-3 lg:w-1/4
-        xl:my-2 xl:px-3 xl:w-1/4
-        rounded-md
-      "
-    >
-      <div class="text-cloud-burst-50">Column 1</div>
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap">
+        <div class="w-full p-4">
+          <div class="bg-white shadow rounded overflow-hidden">
+            <div class="pt-6 px-6 mb-10 flex justify-between items-center">
+              <span
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  w-9
+                  h-10
+                  bg-gray-50
+                  rounded
+                "
+              >
+                <i class="fas fa-skull-crossbones"></i>
+              </span>
+              <a
+                class="
+                  py-1
+                  px-2
+                  bg-blue-50
+                  text-md text-cloud-burst-700
+                  rounded-full
+                "
+                href="#"
+                >Today</a
+              >
+            </div>
+            <div class="px-6 mb-6">
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.NewDeaths) }}
+              </h4>
+              <p class="text-md text-gray-500">New Deaths</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap">
+        <div class="w-full p-4">
+          <div class="bg-white shadow rounded overflow-hidden">
+            <div class="pt-6 px-6 mb-10 flex justify-between items-center">
+              <span
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  w-9
+                  h-10
+                  bg-gray-50
+                  rounded
+                "
+              >
+                <i class="fas fa-skull-crossbones"></i>
+              </span>
+              <a
+                class="
+                  py-1
+                  px-2
+                  bg-blue-50
+                  text-md text-cloud-burst-700
+                  rounded-full
+                "
+                href="#"
+                >Total</a
+              >
+            </div>
+            <div class="px-6 mb-6">
+              <h4 class="text-4xl font-bold">
+                {{ formatNumbers(stats.TotalDeaths) }}
+              </h4>
+              <p class="text-md text-gray-500">Total Deaths</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -104,5 +170,10 @@
 export default {
   name: "DataContainers",
   props: ["stats"],
+  methods: {
+    formatNumbers(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+  },
 };
 </script>

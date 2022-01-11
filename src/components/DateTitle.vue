@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-5xl font-normal leading-normal mt-0 mb-2 text-center">{{ text }}</p>
+    <p class="text-5xl font-normal leading-normal mt-16 mb-2 text-center">{{ text }}</p>
     <p class="text-base font-medium leading-tight mt-0 mb-2 text-center">{{ timestamp }}</p>
   </div>
 </template>

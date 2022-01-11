@@ -1,14 +1,14 @@
 <template>
-  <header>
-    <div class="container px-4 mx-auto">
-      <nav class="flex justify-between items-center py-8">
+  <header class="bg-cloud-burst-700">
+    <div class="container mx-auto">
+      <nav class="flex justify-between items-center py-5">
         <img
           class="h-8"
           src="@/assets/logo-covid.png"
           alt="logo"
           width="auto"
         />
-        <p class="mx-3 text-lg">
+        <p class="mx-3 text-lg text-cloud-burst-50">
           COVID-19 Dashboard <i class="fa-solid fa-chart-line"></i>
         </p>
         <div class="lg:hidden">
@@ -34,7 +34,7 @@
         </div>
         <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
           <li>
-            <a class="text-sm hover:text-indigo-700 font-medium" href="#"
+            <a class="text-sm hover:text-indigo-700 font-medium text-cloud-burst-50" href="#"
               >Home Page</a
             >
           </li>
