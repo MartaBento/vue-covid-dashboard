@@ -44,8 +44,13 @@ export default {
   },
   methods: {
     emitChange() {
-      console.log(this.selected);
-      this.$emit("get-country", this.selected);
+      let chosenCountry = this.selected;
+      let listOfAllCountries = this.countries;
+      var countryData = listOfAllCountries.filter(
+        (x) => x.Country === chosenCountry
+      );
+      this.$emit("get-country-name", chosenCountry);
+      this.$emit("get-country-info", countryData);
     },
   },
 };

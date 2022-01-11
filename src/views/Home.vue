@@ -2,7 +2,12 @@
   <!-- if the browser is not loading the data -->
   <main v-if="!loading">
     <DateTitle :text="title" :date="date" />
-    <CountrySelector :countries="countries" @get-country="getCountryData" />
+    <CountrySelector
+      :countries="countries"
+      :stats="stats"
+      @get-country-name="getCountryTitle"
+      @get-country-info="getCountryData"
+    />
     <div class="flex justify-center mt-6">
       <button
         class="
@@ -58,12 +63,14 @@ export default {
   methods: {
     async fetchData() {
       const request = await fetch("https://api.covid19api.com/summary");
-      const finalData = await request.json();
-      return finalData;
+      const data = await request.json();
+      return data;
     },
-    getCountryData(country) {
-      this.stats = country;
+    getCountryTitle(country) {
       this.title = country;
+    },
+    getCountryData(data) {
+      this.stats = data[0];
     },
     async clearSelectedCountry() {
       this.loading = true;
