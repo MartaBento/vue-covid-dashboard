@@ -3,6 +3,9 @@ A simple dashboard made with Vue.js and Tailwind as the CSS Framework.
 **API used**: [A free API for data on the Coronavirus](https://covid19api.com/ "COVID-19 API")
 
 ## Desktop
+### Loading Data
+
+### Data loaded
 
 ## Mobile
 
