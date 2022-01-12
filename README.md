@@ -2,7 +2,7 @@
 A simple dashboard made with Vue.js and Tailwind as the CSS Framework.
 **API used**: [A free API for data on the Coronavirus](https://covid19api.com/ "COVID-19 API")
 
-<p float="middle">
+<p float="middle" align="center">
   <img src="https://github.com/MartaBento/vue-covid-dashboard/blob/master/mockups_images/Mockup_Desktop.png?raw=true" alt="mockup_desktop" width="450" />
   <img src="https://github.com/MartaBento/vue-covid-dashboard/blob/master/mockups_images/Mockup_Mobile.png?raw=true" alt="mockuo_mobile" width="450" />
 </p>
