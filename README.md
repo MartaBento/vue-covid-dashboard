@@ -21,7 +21,7 @@ A simple dashboard made with Vue.js and Tailwind as the CSS Framework.
   <img src="https://github.com/MartaBento/vue-covid-dashboard/blob/master/mockups_images/Desktop_With_Data.png?raw=true" alt="desktop_data" />
 </p>
 
-## Mobile
+## Responsive
 <p align="center">
   <img src="https://github.com/MartaBento/vue-covid-dashboard/blob/master/mockups_images/Mobile.png?raw=true" alt="mobile" />
 </p>
